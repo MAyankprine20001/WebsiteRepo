@@ -1,0 +1,62 @@
+@import '../../stylesheets/main';
+
+.wrapper {
+    padding: 40px 0;
+    @include lg-min {
+        padding: 80px 0;
+    }
+    &_container {
+        max-width: 974px;
+    }
+    &_ttl {
+        text-align: center;
+        font-weight: 600;
+        font-family: $base-title-family;
+        @include font(42px, $base-text-color);
+        margin-bottom: 40px;
+        @include md-min {
+            font-size: 35px;
+        }
+        @include lg-min {
+            margin-bottom: 80px;
+        }
+        &_sub {
+            @include monaSans(500);
+            @include font(24px, $base-text-color);
+            margin-bottom: 24px;
+            @include md-min {
+                font-size: 35px;
+            }
+        }
+    }
+    &_update {
+        display: block;
+        @include monaSans(600);
+        @include font(14px, $base-text-color);
+        margin-bottom: 24px;
+    }
+    &_text {
+        @include md-min {
+            font-size: $base-font-size;
+        }
+        a {
+            color: currentColor;
+        }
+        ul {
+            @include resetList(0, 0);
+            li {
+                position: relative;
+                padding-left: 15px;
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: '-';
+                }
+            }
+        }
+    }
+}

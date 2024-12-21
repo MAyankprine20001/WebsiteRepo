@@ -1,0 +1,116 @@
+@import '../../stylesheets/main';
+
+.wrapper {
+    text-align: center;
+    background-color: $color-secondary;
+    &_footer {
+        padding: 36px 0 51px;
+        @include md-min {
+            padding: 76px 0 91px;
+        }
+    }
+    &_ttl {
+        @include monaSans(700);
+        @include font(30px, $color-white);
+        text-transform: uppercase;
+        margin-bottom: 26px;
+        @include md-min {
+            font-size: 50px;
+        }
+        @include lg-min {
+            font-size: 80px;
+            margin-bottom: 36px;
+        }
+    }
+    &_menu {
+        @include resetList(0, 0);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 31px;
+        @include sm-min {
+            gap: 81px;
+        }
+        li {
+            cursor: pointer;
+            @include monaSans(500);
+            @include font(18px, $color-white);
+            text-transform: uppercase;
+        }
+    }
+    &_copyright {
+        padding: 5px 0;
+        background-color: $color-secondary-dark;
+        &_list {
+            @include resetList(0, 0);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            @include md-min {
+                gap: 27px;
+            }
+            li {
+                display: flex;
+                align-items: center;
+                @include monaSans(400);
+                @include font(16px, $color-white);
+                &:not(:last-child):after {
+                    content: '';
+                    width: 1px;
+                    height: 31px;
+                    background-color: currentColor;
+                    margin-left: 15px;
+                    @include md-min {
+                        margin-left: 27px;
+                    }
+                }
+                span {
+                    font-weight: 600;
+                }
+                a {
+                    color: $color-white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &_admin {
+        text-align: center;
+        padding-top: 20px;
+        @include md-min {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        small {
+            display: block;
+            @include monaSans(600);
+            @include font(14px, $color-white);
+            padding-bottom: 15px;
+            @include md-min {
+                padding-bottom: 0;
+            }
+        }
+        ul {
+            @include resetList(0, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                @include monaSans(500);
+                @include font(14px, $color-white);
+                &:not(:last-child):after {
+                    content: '';
+                    width: 1px;
+                    height: 31px;
+                    margin: 0 26px;
+                    background-color: $color-white;
+                }
+            }
+        }
+    }
+}

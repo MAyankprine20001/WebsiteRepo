@@ -1,0 +1,61 @@
+// # Min Media Query Breakdowns
+$xs-min: 381px;
+$sm-min: 576px;
+$md-min: 768px;
+$lg-min: 992px;
+$xl-min: 1200px;
+$xxl-min: 1400px;
+$desktop-min-1500: 1500px;
+$desktop-min-1600: 1600px;
+$desktop-min-1700: 1700px;
+$desktop-min-1800: 1800px;
+$desktop-min-1920: 1920px;
+
+// extra Small devices
+@mixin xs-min {
+	@media (min-width: #{$xs-min}) {
+		@content;
+	}
+}
+
+// Small devices
+@mixin sm-min {
+    @media (min-width: #{$sm-min}) {
+        @content;
+    }
+}
+ 
+// Medium devices
+@mixin md-min {
+    @media (min-width: #{$md-min}) {
+        @content;
+    }
+}
+
+// Large devices
+@mixin lg-min {
+    @media (min-width: #{$lg-min}) {
+        @content;
+    }
+}
+ 
+// Extra large devices
+@mixin xl-min {
+    @media (min-width: #{$xl-min}) {
+        @content;
+    }
+}
+
+// Extra Extra large devices
+@mixin xxl-min {
+    @media (min-width: #{$xxl-min}) {
+        @content;
+    }
+}
+
+//Custom Min Width Media Query
+@mixin custom-min($width) {
+    @media (min-width: #{$width}) {
+        @content;
+    }
+}

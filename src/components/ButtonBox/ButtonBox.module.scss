@@ -1,0 +1,50 @@
+@import '../../stylesheets/main';
+
+.wrapper {
+    margin-bottom: 16px;
+    @include xxl-min {
+        margin-bottom: 24px;
+    }
+    &_btn {
+        background-color: transparent;
+        outline: 0;
+        border: 1px solid transparent;
+        line-height: 44px;
+        height: 44px;
+        width: 100%;
+        cursor: pointer;
+        @include monaSans(600);
+        font-size: $base-font-size;
+        @include border-radius(8px);
+        padding: 0 20px;
+        @include transition(.3s);
+        &_small {
+            font-size: 14px;
+            line-height: 37px;
+            height: 37px;
+            
+        }
+        &_primary {
+            color: $color-white;
+            border-color:$color-secondary;
+            background-color: $color-secondary;
+            &:hover {
+                color: $color-primary;
+                border-color: $color-primary;
+                background-color: $color-white;
+            }
+        }
+        &_secondary {
+            color: $color-primary;
+            @include box-shadow(0 1px 3px rgba($color-black, 0.1));
+            border-color: $color-primary;
+            background-color: transparent;
+            &:hover {
+                color: $color-white;
+                border-color: $color-primary;
+                background-color: $color-primary;
+            }
+        }
+        
+    }
+}

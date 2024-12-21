@@ -1,0 +1,34 @@
+@import '../../stylesheets/main';
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include resetList(0, 0);
+    &_edit {
+        color: $color-primary;
+    }
+    &_delete {
+        color: $color-danger;
+    }
+    li {
+        display: flex;
+        align-items: center;
+        &:not(:last-child) {
+            padding-right: 21px;
+            margin-right: 20px;
+            border-right: 1px solid rgba($color: $color-primary, $alpha: 0.5);
+        }
+        button {
+            outline: 0;
+            border: 0;
+            cursor: pointer;
+            font-size: 20px;
+            background-color: transparent;
+            padding: 0;
+            svg {
+                display: block;
+            }
+        }
+    }
+}

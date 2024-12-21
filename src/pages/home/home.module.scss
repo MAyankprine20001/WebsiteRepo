@@ -1,0 +1,620 @@
+@import "../../stylesheets/main";
+
+.wrapper {
+  overflow: hidden;
+  // Banner Section
+  &_banner {
+    padding: 40px 0;
+    background-image: url(/images/ImageLogo.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: auto 100%;
+    position: relative;
+    @include sm-min {
+      display: flex;
+      align-items: center;
+      min-height: 427px;
+      background-position: center bottom;
+      background-size: cover;
+    }
+    @include lg-min {
+      min-height: 627px;
+      //   background-size: contain;
+    }
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background-color: rgba($color: $color-white, $alpha: 0.85);
+      @include sm-min {
+        display: none;
+      }
+    }
+    &_box {
+      @include sm-min {
+        max-width: 50%;
+      }
+    }
+    &_ttl {
+      @include monaSans(400);
+      @include font(28px, $base-text-color);
+      margin-bottom: 16px;
+      @include lg-min {
+        font-size: 40px;
+      }
+      @include xl-min {
+        font-size: 60px;
+      }
+      @include xxl-min {
+        font-size: 80px;
+      }
+      span {
+        font-weight: 700;
+        display: block;
+        color: $color-secondary;
+      }
+    }
+    &_txt {
+      margin-bottom: 35px;
+        @include font(28px, $base-text-color);
+      
+    }
+    &_cta {
+      @include sm-min {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      &_btnWrap {
+        @include sm-min {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  // About Section
+  &_about {
+    padding: 40px 0;
+    @include lg-min {
+      padding: 80px 0;
+    }
+    &_row {
+      @include md-min {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-left: -12px;
+        margin-right: -12px;
+      }
+    }
+    &_box {
+   
+      &:not(:last-child) {
+        @include md-min {
+          margin-bottom: 20px;
+        }
+      }
+      @include md-min {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      &_desktop {
+        display: none;
+        @include md-min {
+          display: block;
+        }
+      }
+      &_mobile {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        @include md-min {
+          display: none;
+        }
+        img {
+          max-height: 260px;
+        }
+      }
+    }
+    &_img {
+      display: block;
+      filter: drop-shadow(4px 4px 5px rgba($color-black, 0.25));
+    }
+    &_ttl {
+      @include monaSans(400);
+      @include font(26px, $base-text-color);
+      margin-bottom: 26px;
+      position: relative;
+      @include md-min {
+        font-size: 30px;
+      }
+      &:after {
+        content: "";
+        width: 87px;
+        height: 2px;
+        display: block;
+        background-color: $base-text-color;
+        margin-top: 8px;
+      }
+      span {
+        font-weight: 700;
+      }
+    }
+    &_txt {
+      margin-bottom: 30px;
+    }
+    &_cta {
+      @include sm-min {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      &_btnWrap {
+        @include sm-min {
+          margin-bottom: 0;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  // Feature Section
+  &_feature {
+    background-color: #f1f1f1;
+    background-position: center center;
+    background-image: url("/images/home/feature-bg.png");
+    padding: 40px 0;
+    @include lg-min {
+      background-repeat: no-repeat;
+      padding: 80px 0;
+    }
+    &_ttlWrap {
+      text-align: center;
+    }
+    &_ttl {
+      @include monaSans(400);
+      @include font(26px, $base-text-color);
+      margin-bottom: 26px;
+      position: relative;
+      @include md-min {
+        font-size: 30px;
+      }
+      &:after {
+        content: "";
+        width: 87px;
+        height: 2px;
+        display: block;
+        margin: 0 auto;
+        background-color: $base-text-color;
+        margin-top: 8px;
+      }
+      span {
+        font-weight: 700;
+      }
+    }
+    &_txt {
+      margin-bottom: 30px;
+    }
+    &_row {
+      @include md-min {
+        display: flex;
+        gap: 24px;
+      }
+      @include lg-min {
+        gap: 30px;
+      }
+    }
+    &_box {
+      flex-grow: 1;
+      @include xxl-min {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      &:first-child {
+        margin-bottom: 20px;
+        @include md-min {
+          margin-bottom: 0;
+        }
+        @include lg-min {
+          > div {
+            flex-direction: row-reverse;
+            > div {
+              &:last-child {
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+    }
+    &_img {
+      display: none;
+      flex-shrink: 0;
+      @include lg-min {
+        display: block;
+      }
+    }
+    &_item {
+      display: flex;
+      gap: 20px;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+        @include lg-min {
+          margin-bottom: 40px;
+        }
+      }
+      &_icon {
+        flex-shrink: 0;
+        img {
+          width: 70px;
+        }
+      }
+      &_content {
+        flex-grow: 1;
+      }
+      &_ttl {
+        @include monaSans(600);
+        @include font(20px, $base-text-color);
+        margin-bottom: 14px;
+        @include lg-min {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  // Vendor Section
+  //   &_vendor {
+  //     padding: 40px 0;
+  //     @include lg-min {
+  //       padding: 80px 0;
+  //     }
+  //     &_row {
+  //       @include md-min {
+  //         gap: 30px;
+  //         display: flex;
+  //         align-items: center;
+  //         flex-direction: row-reverse;
+  //       }
+  //     }
+  //     &_box {
+  //       @include md-min {
+  //         flex: 1;
+  //       }
+  //       &:first-child {
+  //         display: flex;
+  //         justify-content: center;
+  //         margin-bottom: 20px;
+  //         @include md-min {
+  //           margin-bottom: 0;
+  //         }
+  //       }
+  //     }
+  //     &_ttl {
+  //       @include monaSans(400);
+  //       @include font(26px, $base-text-color);
+  //       margin-bottom: 26px;
+  //       position: relative;
+  //       @include md-min {
+  //         font-size: 30px;
+  //       }
+  //       &:after {
+  //         content: "";
+  //         width: 87px;
+  //         height: 2px;
+  //         display: block;
+  //         background-color: $base-text-color;
+  //         margin-top: 8px;
+  //       }
+  //       span {
+  //         font-weight: 700;
+  //       }
+  //     }
+  //   }
+
+  .wrapper_vendor {
+    background: #f5f5f5;
+    padding: 40px 20px; // Increased padding for more spacing
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap; // Ensures responsiveness for smaller screens
+    }
+
+    .wrapper_vendor_row {
+      display: flex;
+      flex-wrap: wrap; // Allows content to wrap on smaller screens
+      align-items: center;
+      justify-content: center;
+      gap: 20px; // Adds space between items
+    }
+
+    .wrapper_vendor_box {
+      flex: 1;
+      min-width: 300px; // Prevents boxes from becoming too small
+      max-width: 500px; // Limits box width for consistent design
+      text-align: center;
+      padding: 20px;
+
+      img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+      }
+
+      h2 {
+        color: #000000;
+        font-size: 2rem; // Increased font size for better readability
+        margin-bottom: 15px;
+      }
+
+      .destination {
+        font-size: 1.5rem;
+        color: #333;
+        margin-top: 10px;
+      }
+
+      .details {
+        font-size: 1rem;
+        color: #666;
+        margin: 10px 0;
+      }
+
+      .price {
+        font-size: 1.2rem;
+        color: #000000;
+        font-weight: bold;
+      }
+
+      .bookNowBtn {
+        margin-top: 20px;
+        padding: 12px 25px; // Adjusted padding for better aesthetics
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #43a047;
+        }
+      }
+    }
+  }
+
+  // Gate Fence Section
+  &_gate {
+    background-color: #f1f1f1;
+    padding: 40px 0;
+    @include md-min {
+      margin: 63px 0 150px;
+    }
+    @include lg-min {
+      padding: 30px 0;
+    }
+    &_row {
+      @include md-min {
+        gap: 30px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    &_box {
+      @include md-min {
+        flex: 1;
+      }
+      &:first-child {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        @include md-min {
+          margin-bottom: 0;
+          img {
+            margin: -109px 0;
+          }
+        }
+      }
+    }
+    &_ttl {
+      @include monaSans(400);
+      @include font(26px, $base-text-color);
+      margin-bottom: 26px;
+      position: relative;
+      @include md-min {
+        font-size: 30px;
+      }
+      &:after {
+        content: "";
+        width: 87px;
+        height: 2px;
+        display: block;
+        background-color: $base-text-color;
+        margin-top: 8px;
+      }
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+  // Download Section
+  &_download {
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("/images/home/download-bg.jpg");
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding: 40px 0;
+    @include md-min {
+      min-height: 345px;
+    }
+    @include lg-min {
+      margin-bottom: 80px;
+    }
+    &:before {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background-color: rgba($color: $color-black, $alpha: 0.8);
+      position: absolute;
+    }
+    &_ttl {
+      @include monaSans(600);
+      @include font(26px, $color-white);
+      margin-bottom: 40px;
+      position: relative;
+      @include md-min {
+        font-size: 30px;
+      }
+    }
+    &_list {
+      gap: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      @include resetList(0, 0);
+      @include sm-min {
+        flex-wrap: nowrap;
+      }
+      li {
+        border: 1px solid $color-white;
+        @include border-radius(22px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        @include monaSans(400);
+        @include font(16px, $color-white);
+        padding: 9px;
+        text-align: left;
+        cursor: pointer;
+        @include transition(0.3s);
+        width: 100%;
+        @include sm-min {
+          justify-content: flex-start;
+          width: auto;
+        }
+        @include md-min {
+          &:hover {
+            transform: scale(0.9);
+          }
+          gap: 13px;
+          padding: 9px 21px;
+        }
+        img {
+          width: 30px;
+          display: block;
+          @include xxl-min {
+            width: 40px;
+          }
+        }
+        span {
+          b {
+            display: block;
+            @include monaSans(600);
+            margin-top: 5px;
+            @include md-min {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.exploreSection {
+  text-align: center;
+  padding: 2rem;
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    color: #6b6b6b;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .mapContainer {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url("/images/world-map.png");
+    background-size: cover;
+    background-position: center;
+
+    .card {
+      position: absolute;
+      width: 150px;
+      height: 180px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      transform: rotate(-5deg) translateY(0);
+      animation: floatCard 3s ease-in-out infinite;
+
+      &:hover {
+        transform: scale(1.1) rotate(0deg);
+        transition: transform 0.3s ease;
+      }
+
+      img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+      }
+
+      h3 {
+        margin: 0;
+        padding: 0.5rem;
+        font-size: 1rem;
+        color: #2c2c2c;
+        background-color: #e0ffe0;
+      }
+    }
+
+    // Animation keyframes
+    @keyframes floatCard {
+      0% {
+        transform: translateY(0) rotate(-5deg);
+      }
+      50% {
+        transform: translateY(-10px) rotate(-3deg);
+      }
+      100% {
+        transform: translateY(0) rotate(-5deg);
+      }
+    }
+  }
+
+  .contactUs {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

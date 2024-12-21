@@ -1,0 +1,35 @@
+@import '../../stylesheets/main';
+
+.wrapper {
+    label {
+        display: flex;
+        cursor: pointer;
+        input {
+            @include appearance();
+            margin: 0;
+        }
+    }
+    &_icon {
+        flex-shrink: 0;
+        width: 25px;
+        height: 25px;
+        border: 1px solid $color-primary;
+        @include border-radius(5px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &_active {
+            background-color: $color-primary;
+            color: $color-white;
+        }
+    }
+    &_text {
+        flex-grow: 1;
+        line-height: 25px;
+        display: block;
+        @include monaSans(400);
+        @include font($base-font-size, $base-text-color);
+        padding-top: 1px;
+        padding-left: 10px;
+    }
+}

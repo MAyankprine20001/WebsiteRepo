@@ -1,0 +1,52 @@
+@import './stylesheets/main';
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0 0 15px;
+}
+
+// Container
+.container {
+  width: 100%;
+  max-width: 1194px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+  position: relative;
+  z-index: 1;
+  @include xxl-min {
+    max-width: $container-width;
+  }
+}
+
+.wrapper {
+  background-color: $color-primary;
+  min-height: 100vh;
+  padding: 12px;
+  overflow: hidden;
+  @include transition(.3s);
+  @include lg-min {
+    padding: 20px;
+  }
+  &--open {
+    @include lg-min {
+      padding-left: 287px;
+    }
+  }
+  #ContentBox {
+    background-color: #F6F6F6;
+    @include border-radius(22px);
+    padding: 12px;
+    @include md-min {
+      padding: 20px;
+      min-height: calc(100vh - 91px);
+    }
+  }
+}

@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+//Theme Colors
+$color-primary: #262626;
+$color-primary-light: lighten($color-primary, 5);
+$color-primary-dark: darken($color-primary, 5);
+
+$color-secondary: #3B8C3C;
+$color-secondary-light: lighten($color-secondary, 5);
+$color-secondary-dark: darken($color-secondary, 5);
+
+$color-danger: #F44336;
+$color-danger-light: lighten($color-danger, 5);
+$color-danger-dark: darken($color-danger, 5);
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+//Body Attributes
+$base-text-color: $color-primary;
+$base-font-size: 16px;
+$base-line-height: 1.3;
+$base-font-family: "Mona Sans", sans-serif;
+$base-title-family: "Roboto", sans-serif;
+$base-body-bg: $color-white;
+
+// Container width
+$container-width: 1384px; 
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;

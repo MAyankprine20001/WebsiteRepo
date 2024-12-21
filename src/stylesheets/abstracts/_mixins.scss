@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+// box shadow mixin
+@mixin box-shadow($boxShadow) {
+    box-shadow: $boxShadow;
+}
+// border radius mixin
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
+// transition mixin
+@mixin transition($time) {
+    transition: (all $time ease-in-out);
+}
+
+// input appearance mixin
+@mixin appearance {
+    appearance: none;
+}
+// UL,OL Default style remove
+@mixin resetList($padding: 0, $margin: 0) {
+    list-style: none;
+    padding: $padding;
+    margin: $margin;
+}
+// Set Font size & color
+@mixin font($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+
+// Set Background Gradient Color
+@mixin bgGradient($start, $end) {
+    background-color: $start;
+    background: linear-gradient(to right, $start 0%, $end 100%);
+    background: -webkit-linear-gradient(to right, $start 0%, $end 100%);
+}
+
+// Set Cuprum font family & weight
+@mixin monaSans($weight) {
+    @if $weight == 300 {
+        font-family: "Mona Sans", sans-serif;
+        font-weight: $weight;
+    } @else if $weight == 400 {
+        font-family: "Mona Sans", sans-serif;
+        font-weight: $weight;
+    } @else if $weight == 500 {
+        font-family: "Mona Sans", sans-serif;
+        font-weight: $weight;
+    } @else if $weight == 600 {
+        font-family: "Mona Sans", sans-serif;
+        font-weight: $weight;
+    } @else if $weight == 700 {
+        font-family: "Mona Sans", sans-serif;
+        font-weight: $weight;
+    } @else {
+        @error "Unknown font family #{$weight}.";
+    }
+}

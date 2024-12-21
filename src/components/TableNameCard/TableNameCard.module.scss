@@ -1,0 +1,44 @@
+@import '../../stylesheets/main';
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &_icon {
+        flex-shrink: 0;
+        &_img {
+            width: 50px;
+            height: 50px;
+            display: block;
+            @include border-radius(10px);
+        }
+        &_initial {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include monaSans(600);
+            @include font(12px, $base-text-color);
+            @include border-radius(50%);
+            background-color: #797979;
+            @include box-shadow(1px 4px 5px rgba($color-black, .25));
+        }
+    }
+    &_text {
+        flex-grow: 1;
+        text-align: left;
+        &_name {
+            display: block;
+            @include monaSans(600);
+            @include font(14px, #797979);
+            line-height: 1.5;
+        }
+        &_email {
+            font-family: $base-title-family;
+            font-weight: 300;
+            @include font(12px, #797979);
+            line-height: 1.5;
+        }
+    }
+}

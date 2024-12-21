@@ -1,0 +1,13 @@
+@import '../../stylesheets/main';
+
+.wrapper {
+    @include monaSans(400);
+    @include font($base-font-size, $base-text-color);
+    line-height: 28px;
+    > * {
+        margin-bottom: 0;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}

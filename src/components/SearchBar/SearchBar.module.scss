@@ -1,0 +1,7 @@
+@import '../../stylesheets/main';
+
+.wrapper {
+    &_search {
+        @include box-shadow(0 0 10px rgba($color-black, .2));
+    }
+}

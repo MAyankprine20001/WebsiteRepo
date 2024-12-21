@@ -1,0 +1,84 @@
+@import '../../stylesheets/main';
+
+.wrapper {
+    &_over {
+        overflow: auto;
+        background-color: $color-white;
+        @include border-radius(10px);
+        @include box-shadow(0 0 20px rgba($color-black, 0.1));
+}
+    &_table {
+        width: 100%;
+        min-width: 800px;
+        border: 0;
+        border-spacing: 0;
+        text-align: left;
+        thead {
+            tr {
+                th {
+                    @include monaSans(500);
+                    @include font($base-font-size, $color-primary);
+                    border-bottom: 1px solid rgba($color-primary, 0.1);
+                }
+            }
+        }
+        th, td {
+            padding: 15px 20px;
+            &:last-child {
+                text-align: right;
+            }
+        }
+        td {
+            @include monaSans(400);
+            @include font(14px, #797979);
+        }
+    }
+    &_pagination {
+        display: flex;
+        gap: 17px;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-top: 19px;
+        &_page {
+            @include monaSans(400);
+            @include font(14px, #7D7D7D);
+        }
+        &_select {
+            height: 40px;
+            outline: 0;
+            border: 1px solid #797979;
+            @include monaSans(500);
+            @include font(14px, #797979);
+            background-color: $color-white;
+            @include border-radius(10px);
+            cursor: pointer;
+            @include box-shadow(none);
+            @include appearance;
+            background-size: 15px;
+            background-repeat: no-repeat;
+            background-position: calc(100% - 20px) center;
+            background-image: url('/images/select-icon.png');
+            padding: 0 54px 0 20px;
+        }
+        &_cta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-left: auto;
+            &_btn {
+                align-items: center;
+                border: 1px solid #7D7D7D;
+                background-color: $color-white;
+                @include border-radius(5px);
+                cursor: pointer;
+                color: #7D7D7D;
+                display: flex;
+                height: 30px;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                width: 30px;
+            }
+        }
+    }
+}
